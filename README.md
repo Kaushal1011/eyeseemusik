@@ -7,7 +7,7 @@ $ npm install
 ```
 
 To run the local server use:
-
+> require serve as local files require CORS
 ```sh
 $ npm start
 
