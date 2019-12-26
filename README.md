@@ -10,7 +10,11 @@ To run the local server use:
 
 ```sh
 $ npm start
+
 ```
+> you have to go the /src directory start index.html
+
+> problem with how the path is given cannot add loader
 
 To build use:
 ```sh
