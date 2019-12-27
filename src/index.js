@@ -27,8 +27,8 @@ var amplitudeArray; // array to hold time domain data
 var timeArray;
 var audioUrl = "sample.mp3";
 // Global Variables for the Graphics
-var canvasWidth = screen.width;
-var canvasHeight = screen.height-60;
+var canvasWidth = window.innerWidth;
+var canvasHeight = window.innerHeight;
 var ctx;
 
 function setHeightWidth() {
