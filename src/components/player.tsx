@@ -51,25 +51,25 @@ class MusicPlayer extends React.Component<MPProps, MPState>{
         if (isNext) {
             if (this.state.currentTrack + 1 < this.props.tracks.length) {
                 this.setState({ currentTrack: this.state.currentTrack + 1 })
-                player.load();
                 if (this.state.playing) {
                     player.play();
                 }
             }
             else {
-                alert('Last track');
+                player.load();
                 player.pause();
+                alert('Last track');
             }
         } else {
             if (-1 < this.state.currentTrack - 1) {
                 this.setState({ currentTrack: this.state.currentTrack - 1 })
-                player.load();
                 if (this.state.playing) {
                     player.play();
                 }
             } else {
-                alert('No Previous Track');
+                player.load();
                 player.pause();
+                alert('No Previous Track');
             }
         }
 
