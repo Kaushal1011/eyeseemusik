@@ -49,20 +49,27 @@ class MusicPlayer extends React.Component<MPProps, MPState>{
     playNext_Pre: (isNext: boolean) => void = (isNext) => {
         let player = this.state.player as HTMLAudioElement;
         if (isNext) {
-            if (this.state.currentTime + 1 < this.props.tracks.length) {
+            if (this.state.currentTrack + 1 < this.props.tracks.length) {
                 this.setState({ currentTrack: this.state.currentTrack + 1 })
                 player.load();
                 if (this.state.playing) {
                     player.play();
                 }
             }
+            else {
+                alert('Last track');
+                player.pause();
+            }
         } else {
-            if (-1 < this.state.currentTime - 1) {
+            if (-1 < this.state.currentTrack - 1) {
                 this.setState({ currentTrack: this.state.currentTrack - 1 })
                 player.load();
                 if (this.state.playing) {
                     player.play();
                 }
+            } else {
+                alert('No Previous Track');
+                player.pause();
             }
         }
 
@@ -86,11 +93,13 @@ class MusicPlayer extends React.Component<MPProps, MPState>{
         this.seek.bind(this);
     }
     seek(n: number) {
-        let newplayer: HTMLAudioElement;
-        if (this.state.player !== undefined) {
-            newplayer = this.state.player;
-            newplayer.currentTime = n * this.state.player?.duration / 100;
-            this.setState({ player: newplayer })
+        if (!isNaN(n)) {
+            let newplayer: HTMLAudioElement;
+            if (this.state.player !== undefined) {
+                newplayer = this.state.player;
+                newplayer.currentTime = n * this.state.player?.duration / 100;
+                this.setState({ player: newplayer })
+            }
         }
     }
     componentDidMount() {
