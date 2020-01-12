@@ -34,8 +34,9 @@ const App: React.FC = () => {
           Learn React
         </a>
 
-        <MusicPlayer tracks={tracks} />
       </header>
+
+      <MusicPlayer tracks={tracks} />
     </div>
   );
 }
