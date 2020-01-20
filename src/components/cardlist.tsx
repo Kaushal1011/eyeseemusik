@@ -2,12 +2,15 @@ import React from 'react';
 import styled from 'styled-components'
 import Card from './card'
 const CardlistContainer = styled.div`
-position:absolute;
-top:20%;
+height:100vh;
 display:flex;
 overflow-x:auto;
 :first-child{
-    margin-left:200px;
+    padding-left:20em;
+}
+:last-child{
+    padding-right:40em;
+    margin-right:20em;
 }
 `
 export interface track {
@@ -47,6 +50,7 @@ class Cardlist extends React.Component<CLprops,CLState>{
             let player:HTMLAudioElement = document.getElementById('player') as HTMLAudioElement;
             player.load();
             player.play();
+            
         }
     }
     scrollhandler(e:WheelEvent){
