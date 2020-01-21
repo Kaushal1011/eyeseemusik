@@ -67,18 +67,21 @@ width:270px;
 border-radius:0;
 border-style:solid;
 border-width:5px;
-border-color:#d0de50;
+border-color:hsl(66, 68%, 59%);
 transform:rotate(0.02turn);
 transition: all .3s ease-in-out;
-:hover{
-border-radius:50%;
-transform:scale(2);
-transform:traslate(20px,0);
-//transition:  .3s ease-in-out;
 background:url(${playbutton});
-background-size:20%;
-background-repeat:no-repeat;
 background-position: 55% 50%;
+background-size:0;
+background-repeat:no-repeat;
+
+:hover{
+    border-radius:50%;
+    transform:scale(2);
+    transform:traslate(20px,0);
+    transition:  .3s ease-in-out;
+    background-repeat:no-repeat;
+    background-size:20%;
 }
 `
 
@@ -93,7 +96,7 @@ export default class Card extends React.Component<track>{
                 <SongTitle>{this.props.track.title}</SongTitle>
                 <ArtistName>{this.props.track.artist}</ArtistName>
             </LabelContainer>
-            
+
             </CardContainer>
         )
     }

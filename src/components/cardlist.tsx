@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components'
 import Card from './card'
+
+import animation from '../function/animation'
+
 const CardlistContainer = styled.div`
+z-index:2000;
 height:100vh;
 display:flex;
 overflow-x:auto;
@@ -35,32 +39,19 @@ class Cardlist extends React.Component<CLprops,CLState>{
             playing:false,
             currenttrack:''
         }
-        this.scrollhandler.bind(this);
         this.play.bind(this);
     }
     play (src:string){
         this.setState({currenttrack:src,playing:true});
     }
     componentDidMount(){
-        let cl = document.getElementById('cardlist') as HTMLDivElement;
-        cl.addEventListener('wheel',this.scrollhandler);
+        animation();
     }
     componentDidUpdate(){
         if(this.state.playing){
             let player:HTMLAudioElement = document.getElementById('player') as HTMLAudioElement;
             player.load();
             player.play();
-            
-        }
-    }
-    scrollhandler(e:WheelEvent){
-
-        let cl = document.getElementById('cardlist') as HTMLDivElement;
-        //console.log(e.deltaY);
-        if(e.deltaY > 0){
-            cl.scrollLeft += 100;
-        }else{
-            cl.scrollLeft -= 100;
         }
     }
     render(){
