@@ -33,6 +33,7 @@ interface CLState{
 }
 class Cardlist extends React.Component<CLprops,CLState>{
     state:CLState;
+    // add uint8array here as state of fft
     constructor(props:any){
         super(props);
         this.state = {
@@ -45,6 +46,7 @@ class Cardlist extends React.Component<CLprops,CLState>{
         this.setState({currenttrack:src,playing:true});
     }
     componentDidMount(){
+        //initial animation
         animation();
     }
     componentDidUpdate(){
@@ -52,6 +54,20 @@ class Cardlist extends React.Component<CLprops,CLState>{
             let player:HTMLAudioElement = document.getElementById('player') as HTMLAudioElement;
             player.load();
             player.play();
+            // add webaudio api code
+            animation();
+            // add fft array as paramter for animation
+            // animation(this.state.fft)            
+        }
+        else if(!this.state.playing){
+            // for when component updates on pause
+            // let player:HTMLAudioElement = document.getElementById('player') as HTMLAudioElement;
+            // player.load();
+            // player.play();
+            // add webaudio api code
+            animation();
+            // add fft array as paramter for animation
+            // animation(this.state.fft)            
         }
     }
     render(){
