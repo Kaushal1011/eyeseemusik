@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f9da2d20.chunk.css",
+    "main.js": "/static/js/main.0e0f4ff5.chunk.js",
+    "main.js.map": "/static/js/main.0e0f4ff5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0b794307.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0b794307.js.map",
+    "static/js/2.2db80389.chunk.js": "/static/js/2.2db80389.chunk.js",
+    "static/js/2.2db80389.chunk.js.map": "/static/js/2.2db80389.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f20be7f47d5dc86546aa47c2d6cb53e6.js": "/precache-manifest.f20be7f47d5dc86546aa47c2d6cb53e6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.f9da2d20.chunk.css.map": "/static/css/main.f9da2d20.chunk.css.map",
+    "static/js/2.2db80389.chunk.js.LICENSE": "/static/js/2.2db80389.chunk.js.LICENSE",
+    "static/media/creativeminds.jpg": "/static/media/creativeminds.278095ed.jpg",
+    "static/media/summer.jpg": "/static/media/summer.dfc438db.jpg",
+    "static/media/ukulele.jpg": "/static/media/ukulele.e44d7408.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b794307.js",
+    "static/js/2.2db80389.chunk.js",
+    "static/css/main.f9da2d20.chunk.css",
+    "static/js/main.0e0f4ff5.chunk.js"
+  ]
+}
